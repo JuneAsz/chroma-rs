@@ -16,7 +16,7 @@ fn main() -> anyhow::Result<()> {
 
     let img = load_pixels(&args.path)?;
     let mut centroids = init_centroids(&img, args.k as usize);
-    run(img, args.k as usize, args.sample_size, &mut centroids);
+    run(img, args.k as usize, args.iterations, &mut centroids);
 
     print_palette(&centroids);
 
