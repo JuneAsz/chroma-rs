@@ -69,7 +69,7 @@ pub fn run_worker_bytes(bytes: &[u8], k: usize, centroids: &[(u8, u8, u8)]) -> W
     }
 }
 
-pub fn run(img: image::RgbImage, k: usize, iterations: u32, centroids: &mut Vec<(u8, u8, u8)>) {
+pub fn run(img: image::RgbImage, k: usize, iterations: usize, centroids: &mut Vec<(u8, u8, u8)>) {
     assert_eq!(k, centroids.len(), "k must match the number of centroids");
 
     let pixels = img.as_raw();
