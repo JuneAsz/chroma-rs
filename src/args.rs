@@ -8,7 +8,7 @@ pub struct Args {
     pub path: PathBuf,
 
     #[arg(short, long, default_value_t = 20)]
-    pub sample_size: u32,
+    pub iterations: usize,
 
     #[arg(short, default_value_t = 20)]
     pub k: u16,
